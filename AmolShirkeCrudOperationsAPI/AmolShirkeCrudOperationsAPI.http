@@ -1,0 +1,6 @@
+@AmolShirkeCrudOperationsAPI_HostAddress = http://localhost:5127
+
+GET {{AmolShirkeCrudOperationsAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
