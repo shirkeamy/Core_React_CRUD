@@ -1,4 +1,5 @@
 using AmolShirkeCrudOperationsAPI.Context;
+using AmolShirkeCrudOperationsAPI.Repositories.CountryRepository;
 using AmolShirkeCrudOperationsAPI.Repositories.StudentRepository;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 );
 
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 
 var app = builder.Build();
 
