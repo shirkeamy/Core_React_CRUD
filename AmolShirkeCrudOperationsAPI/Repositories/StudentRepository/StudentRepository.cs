@@ -2,12 +2,13 @@
 using AmolShirkeCrudOperationsAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace AmolShirkeCrudOperationsAPI.Repositories
+namespace AmolShirkeCrudOperationsAPI.Repositories.StudentRepository
 {
-    public class StudentRepository: IStudentRepository
+    public class StudentRepository : IStudentRepository
     {
         private readonly ApplicationDbContext _applicationDbContext;
-        public StudentRepository(ApplicationDbContext context) {
+        public StudentRepository(ApplicationDbContext context)
+        {
             _applicationDbContext = context;
         }
 

@@ -1,6 +1,6 @@
 ﻿using AmolShirkeCrudOperationsAPI.Models;
 
-namespace AmolShirkeCrudOperationsAPI.Repositories
+namespace AmolShirkeCrudOperationsAPI.Repositories.StudentRepository
 {
     public interface IStudentRepository
     {

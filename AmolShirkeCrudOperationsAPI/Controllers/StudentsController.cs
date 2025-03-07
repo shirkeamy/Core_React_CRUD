@@ -1,7 +1,6 @@
 ﻿using AmolShirkeCrudOperationsAPI.Models;
-using AmolShirkeCrudOperationsAPI.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using AmolShirkeCrudOperationsAPI.Repositories.StudentRepository;
 
 namespace AmolShirkeCrudOperationsAPI.Controllers
 {

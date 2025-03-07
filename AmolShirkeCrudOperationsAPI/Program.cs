@@ -1,5 +1,5 @@
 using AmolShirkeCrudOperationsAPI.Context;
-using AmolShirkeCrudOperationsAPI.Repositories;
+using AmolShirkeCrudOperationsAPI.Repositories.StudentRepository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
