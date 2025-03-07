@@ -12,7 +12,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("StudentDbConnectionString"))
+    options.UseSqlServer(builder.Configuration.GetConnectionString("StudentDbConnectionString"),
+    sqlOption=>sqlOption.EnableRetryOnFailure())
+    
 );
 
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
