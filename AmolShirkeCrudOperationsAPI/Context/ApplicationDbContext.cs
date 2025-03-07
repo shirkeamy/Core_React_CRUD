@@ -18,5 +18,24 @@ namespace AmolShirkeCrudOperationsAPI.Context
         public DbSet<Course> Courses { get; set; }
         public DbSet<StudentCourse> StudentCourses { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Student>()
+                .HasOne(s => s.Country)
+                .WithMany()
+                .OnDelete(DeleteBehavior.NoAction);
+
+            // Similarly for other relationships:
+            modelBuilder.Entity<Student>()
+                        .HasOne(s => s.State)
+                        .WithMany()
+                        .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Student>()
+                        .HasOne(s => s.City)
+                        .WithMany()
+                        .OnDelete(DeleteBehavior.NoAction);
+        }
+
     }
 }
